@@ -5,6 +5,7 @@ node('host_machine') {
   stage('Build artefact with gradle')
   {
      sh '''cd initial
+        touch 13123.txt
         alias gradle='docker run --rm -v $(pwd):$(pwd) -w $(pwd) gradle gradle'
         gradle build
         #cp build/libs/gs-spring-boot-0.1.0.jar /opt/test/
