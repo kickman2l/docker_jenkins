@@ -7,7 +7,8 @@ node('host_machine') {
      sh '''cd initial
         alias gradle='docker run --rm -v $(pwd):$(pwd) -w $(pwd) gradle gradle'
         gradle build
-        cp build/libs/gs-spring-boot-0.1.0.jar /opt/test/
-        chmod +x ${WORKSPACE}/gs-spring-boot-0.1.0.jar'''
+        #cp build/libs/gs-spring-boot-0.1.0.jar /opt/test/
+        #chmod +x ${WORKSPACE}/gs-spring-boot-0.1.0.jar
+	'''
   }
 }
