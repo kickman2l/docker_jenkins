@@ -11,4 +11,10 @@ node('host_machine') {
         chmod +x ../../../artefact/gs-spring-boot-0.1.0.jar
 	'''
   }
+  stage('Deploy artefact on server')
+  {
+     sh ''' 
+            docker-compose up -d
+	'''
+  }
 }
